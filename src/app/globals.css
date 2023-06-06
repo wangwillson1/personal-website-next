@@ -3,25 +3,185 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --text-color: #2b3362;
+  --header-color: #18236a;
+  --hover-color: #040718;
+  --background-color: #f4f4f4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.navbar p {
+  margin-right: 3rem;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.navbar svg {
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.navbar p:hover {
+  color: var(--hover-color);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 300
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: var(--header-color);
+}
+
+.portrait {
+  margin-left: 3rem;
+  border-radius: 50%;
+  border: 8px white solid;
+}
+
+.banner, .header {
+  height: 100vh;
+  min-height: 500px;
+}
+
+.fadeOut {
+  opacity:0;
+  transition: 0.25s
+
+}
+.fadeIn {
+  opacity:0.7;
+  transition: 0.25s;
+}
+
+.buffer {
+  width: 72rem;
+}
+
+#about {
+  width: auto;
+}
+
+.content {
+  margin-bottom: 8rem;
+}
+
+.content a {
+  text-decoration: none;
+  border-bottom: 2px dotted var(--text-color);
+  transition: 0.2s;
+}
+
+.content a:hover {
+  text-decoration: none;
+  color: var(--hover-color);
+  border-bottom: 0;
+  transition: 0.2s;
+}
+
+.shiftdown {
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+
+.shiftup {
+  margin-top: -7rem;
+  transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 550px;
+  }
+
+  .portrait {
+    height: 225px;
+    width: 225px;
+  }
+
+  .fadeIn {
+    opacity:0.7;
+    transition: 0.3s;
+    flex: auto;
+  }
+
+  .portrait {
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .shiftup {
+    margin-top: -2rem;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    min-height: 600px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .navbar p {
+    margin-right: 0;
+  }
+
+  .shiftup {
+    margin-top: -3rem;
+    transition: 0.3s;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content p {
+    margin-bottom: 1.25rem;
+  }
 }
