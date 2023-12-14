@@ -28,7 +28,7 @@ export default function Home() {
     <main className="mx-20">
       <div className={"flex flex-col items-center sm:justify-start lg:justify-between header"}>
         <div className="flex flex-row-reverse w-full max-w-6xl items-center justify-between banner pb-24">
-          <Image className="portrait" src="/portrait.jpg"  alt="me" width="325" height="325"/>
+          <Image className="portrait" src="/portrait.jpeg"  alt="me" width="325" height="325"/>
           <div>
             <h1 className='text-6xl md:text-7xl lg:text-8xl'>Hi, I&apos;m <b>Willson</b>!</h1>
             <p className='text-2xl md:text-3xl lg:text-4xl'>I&apos;m a software engineer at Datadog.</p>
@@ -73,8 +73,8 @@ export default function Home() {
           </div>
           <div className="mt-14">
             <h1 className="text-3xl">What am I working on</h1>
-            <p className="text-2xl">I currently work on access control at Datadog, working mainly in Python and React.</p>
-            <p className="text-2xl mt-2">In the past, I worked on internal Terraform API monitors and the IP allowlist feature.</p>
+            <p className="text-2xl">I currently work on access control at Datadog, working mainly in Python and Go.</p>
+            <p className="text-2xl mt-2">In the past, I worked on internal Terraform API monitors and the IP allowlist UI.</p>
             <p className="text-2xl mt-2">Before Datadog, I interned at companies like Meta and Wish.</p>
           </div>
           <div className="mt-14">
